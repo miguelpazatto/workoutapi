@@ -1,4 +1,4 @@
-package com.miguelpazatto.workoutapi.workouts;
+package com.miguelpazatto.workoutapi.workouts.exercises;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package com.miguelpazatto.workoutapi.workouts;
+package com.miguelpazatto.workoutapi.workouts.exercises;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
