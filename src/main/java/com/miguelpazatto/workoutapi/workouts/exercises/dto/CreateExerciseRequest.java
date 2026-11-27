@@ -7,9 +7,9 @@ public record CreateExerciseRequest(
         @NotBlank String name,
         @URL String videoUrl
 ) {
-        public CreateExerciseRequest {
-                if (videoUrl != null && videoUrl.isBlank()) {
-                        videoUrl = null;
-                }
+    public CreateExerciseRequest {
+        if (videoUrl != null && videoUrl.isBlank()) {
+            videoUrl = null;
         }
+    }
 }
