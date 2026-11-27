@@ -45,4 +45,33 @@ public class ExerciseRepositoryTest {
         assertThat(repository.count()).isEqualTo(2);
     }
 
+    @Test
+    void shouldReturnTrueWhenOwnerIdAndNameExists() {
+        UUID ownerId = UUID.randomUUID();
+
+        Exercise exercise = new Exercise(ownerId, "SUPINO RETO", null);
+        repository.saveAndFlush(exercise);
+
+        assertThat(repository.existsByOwnerIdAndNameIgnoreCase(ownerId, "Supino reto")).isTrue();
+    }
+
+    @Test
+    void shouldReturnFalseWhenOwnerIsDifferent() {
+        Exercise exercise = new Exercise(UUID.randomUUID(), "SUPINO RETO", null);
+        repository.saveAndFlush(exercise);
+
+        UUID ownerId = UUID.randomUUID();
+        assertThat(repository.existsByOwnerIdAndNameIgnoreCase(ownerId, "Supino reto")).isFalse();
+    }
+
+    @Test
+    void shouldReturnFalseWhenNameIsDifferent() {
+        UUID ownerId = UUID.randomUUID();
+
+        Exercise exercise = new Exercise(ownerId, "Supino reto", null);
+        repository.saveAndFlush(exercise);
+
+        assertThat(repository.existsByOwnerIdAndNameIgnoreCase(ownerId, "Supino inclinado")).isFalse();
+    }
+
 }
