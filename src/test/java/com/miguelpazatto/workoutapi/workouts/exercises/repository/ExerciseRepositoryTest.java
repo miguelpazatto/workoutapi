@@ -1,5 +1,6 @@
-package com.miguelpazatto.workoutapi.workouts.exercises;
+package com.miguelpazatto.workoutapi.workouts.exercises.repository;
 
+import com.miguelpazatto.workoutapi.workouts.exercises.entity.Exercise;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;

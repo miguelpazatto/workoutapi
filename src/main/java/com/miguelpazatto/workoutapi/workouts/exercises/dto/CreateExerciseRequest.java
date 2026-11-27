@@ -1,4 +1,4 @@
-package com.miguelpazatto.workoutapi.workouts.exercises;
+package com.miguelpazatto.workoutapi.workouts.exercises.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.URL;

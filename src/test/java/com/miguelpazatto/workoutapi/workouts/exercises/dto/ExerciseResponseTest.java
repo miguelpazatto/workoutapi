@@ -1,12 +1,13 @@
-package com.miguelpazatto.workoutapi.workouts.exercises;
+package com.miguelpazatto.workoutapi.workouts.exercises.dto;
 
+import com.miguelpazatto.workoutapi.workouts.exercises.entity.Exercise;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ExerciseReponseTest {
+public class ExerciseResponseTest {
 
     @Test
     void shouldMapAllFieldsFromExercise() {
